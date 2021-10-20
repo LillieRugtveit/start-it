@@ -12,7 +12,6 @@ p {
   max-width: 80ch;
 }
 
-
 .grid--container {
   height: 100vh;
   display: grid;
@@ -23,7 +22,6 @@ p {
   'left main right'
   'footer footer footer';
 }
-
 
 .header {
   display: flex;
