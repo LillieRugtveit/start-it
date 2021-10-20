@@ -1,5 +1,11 @@
+/*Legge til Roboto font fra Google Fonts 
+  med 400, 500 og 700 font vekt.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 html, body {
   margin: 0;
+  font-family: "Roboto";
 }
 
 
@@ -16,12 +22,15 @@ html, body {
 
 
 .header {
+  display: flex;
+  align-items: center;
   grid-area: header;
   background-color: gainsboro;
+  padding: 0rem 20rem;
 }
 
 .header--title {
-
+  margin: 0;
 }
 
 .main {
