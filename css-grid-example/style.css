@@ -1,0 +1,45 @@
+html, body {
+  margin: 0;
+}
+
+
+.grid--container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20rem auto 20rem;
+  grid-template-rows: 4rem auto 2rem;
+  grid-template-areas:
+  'header header header'
+  'left main right'
+  'footer footer footer';
+}
+
+
+.header {
+  grid-area: header;
+  background-color: gainsboro;
+}
+
+.header--title {
+
+}
+
+.main {
+  grid-area: main;
+  background-color: whitesmoke;
+}
+
+.main--left {
+  grid-area: left;
+  background-color: whitesmoke;
+}
+
+.main--right {
+  grid-area: right;
+  background-color: whitesmoke;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(56, 56, 56);
+}
