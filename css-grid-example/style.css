@@ -8,6 +8,10 @@ html, body {
   font-family: "Roboto";
 }
 
+p {
+  max-width: 80ch;
+}
+
 
 .grid--container {
   height: 100vh;
@@ -49,6 +53,10 @@ html, body {
 }
 
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-area: footer;
   background-color: rgb(56, 56, 56);
+  color: white;
 }
