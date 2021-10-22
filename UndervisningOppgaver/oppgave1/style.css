@@ -1,0 +1,39 @@
+body {
+	margin: 0;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+}
+
+table {
+	margin-top: 4rem;
+	height: 12rem;
+	width: 40rem;
+	background-color: rgb(45, 45, 45);
+	border-collapse: collapse;
+	color: white;
+}
+
+th {
+	text-align: start;
+	height: 2rem;
+}
+
+td,
+th {
+	border: 3px solid white;
+	padding: 1rem;
+}
+
+section {
+	width: 40rem;
+}
+
+img {
+	width: 40rem;
+}
+
