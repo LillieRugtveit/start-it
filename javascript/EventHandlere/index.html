@@ -72,9 +72,7 @@
 			let knapperTrykt = 0;
 			function OnKeyDown() {
 				knapperTrykt += 1;
-				document.getElementById(
-					"KeyDown1"
-				).innerText = `OnKeyDown: ${knapperTrykt}`;
+				document.getElementById("KeyDown1").innerText = `OnKeyDown: ${knapperTrykt}`;
 				console.log("OnKeyDown blei kalt!");
 			}
 
@@ -87,17 +85,13 @@
 			let mouseOverTeller = 0;
 			function OnMouseOver() {
 				mouseOverTeller += 1;
-				document.getElementById(
-					"MouseOver1"
-				).innerText = `OnMouseOver: ${mouseOverTeller}`;
+				document.getElementById("MouseOver1").innerText = `OnMouseOver: ${mouseOverTeller}`;
 			}
 
 			let mouseOutTeller = 0;
 			function OnMouseOut() {
 				mouseOutTeller += 1;
-				document.getElementById(
-					"MouseOut1"
-				).innerText = `OnMouseOut: ${mouseOutTeller}`;
+				document.getElementById("MouseOut1").innerText = `OnMouseOut: ${mouseOutTeller}`;
 			}
 
 			function OnLoad() {
