@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+}
+
+.answer {
+  margin: 1rem;
+}
+
+.answer:hover {
+  cursor: pointer;
+  color: orangered;
+}
