@@ -64,7 +64,8 @@
 
 		<script>
 			function OnInput() {
-				let inputBokstaver = document.getElementById("inputBox").textLength;
+				let inputBokstaver = document.getElementById("inputBox").value.length;
+				console.log(inputBokstaver);
 				document.getElementById("Input1").innerText = `OnInput: ${inputBokstaver}`;
 				console.log("OnInput blei kalt!");
 			}
