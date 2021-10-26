@@ -1,0 +1,43 @@
+html,
+body {
+	height: 100vh;
+	margin: 0;
+  background-color: #fef0ee;
+	font-family: sans-serif;
+}
+
+h1 {
+  color: #3d3837;
+}
+
+h2 {
+  color: #4a4342;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	flex-direction: column;
+}
+
+td {
+	color: #61f490;
+	font-size: 5rem;
+  font-weight: 400;
+  transition: 200ms;
+}
+
+td:hover {
+	color: #f46161;
+	cursor: pointer;
+}
+
+table {
+	background-color: #f0e3d2;
+	padding: 2rem 5rem;
+	border-radius: 0.75rem;
+  width: 10rem;
+  height: 10rem;
+}

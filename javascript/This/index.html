@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>This example</title>
+    <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+      <h1>'<span style="color: #6178f4">this</span>' example</h1>
+      <h2>Click to change state</h2>
+			<table>
+				<tr>
+					<td onclick="OnClick(this, 0)" onmouseover="ChangeOnMouseOver(this, 0)" onmouseout="ChangeOnMouseOut(this, 0)">o</td>
+					<td onclick="OnClick(this, 1)" onmouseover="ChangeOnMouseOver(this, 1)" onmouseout="ChangeOnMouseOut(this, 1)">o</td>
+				</tr>
+				<tr>
+					<td onclick="OnClick(this, 2)" onmouseover="ChangeOnMouseOver(this, 2)" onmouseout="ChangeOnMouseOut(this, 2)">o</td>
+					<td onclick="OnClick(this, 3)" onmouseover="ChangeOnMouseOver(this, 3)" onmouseout="ChangeOnMouseOut(this, 3)">o</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+
+  <script>
+    let elementsClicked = [0, 0, 0, 0];
+
+    function ChangeOnMouseOver(element, index) {
+      if(elementsClicked[index] == 1) return;
+      element.innerText = 'x';
+    }
+    function ChangeOnMouseOut(element, index) {
+      if(elementsClicked[index] == 1) return;
+      element.innerText = 'o';
+    }
+
+    function OnClick(element, index) {
+      if(elementsClicked[index] == 1) {
+        elementsClicked[index] = 0;
+        element.innerText = 'o';
+        element.style = '';
+        return;
+      }
+      elementsClicked[index] = 1;
+      element.innerText = 'x';
+      element.style = "color: #f46161;"
+    }
+  </script>
+</html>
