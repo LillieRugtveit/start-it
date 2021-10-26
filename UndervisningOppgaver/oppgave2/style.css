@@ -1,0 +1,126 @@
+html, body {
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: rgb(250, 246, 247);
+}
+
+h2 {
+  color: #4c4c4e;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#empty {
+  margin: 1rem;
+}
+
+.box {
+  padding: 1.5rem 0rem;
+  width: 15rem;
+  text-align: center;
+  color: white;
+  margin: 0.5rem 0;
+  border: 5px solid transparent;
+  border-radius: 0.5rem;
+  transition: 200ms;
+  font-weight: 600;
+}
+
+.button {
+  padding: 1rem 0rem;
+  width: 10rem;
+  text-align: center;
+  background-color: rgb(116, 168, 214);
+  margin: 0.5rem 0;
+  cursor: pointer;
+  border: 5px solid transparent;
+  border-radius: 0.5rem;
+  transition: 200ms;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: transparent;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+/* Farger brukt */
+
+.coral {
+  background-color: #FFA38C;
+  color: whitesmoke;
+}
+
+.button.coral:hover {
+  border: 5px solid #FFA38C;
+  color: #FFA38C;
+}
+
+.button.coral:active {
+  background-color: #ffd0c4;
+}
+
+.cyan {
+  background-color: #A4D8D8;
+  color: #555555;
+}
+
+.button.cyan:hover {
+  border: 5px solid #A4D8D8;
+  color: #A4D8D8;
+}
+
+.button.cyan:active {
+  background-color: #dcfafa;
+}
+
+.red {
+  background-color: #D26466;
+  color: #e6dbdb;
+}
+
+.button.red:hover {
+  border: 5px solid #D26466;
+  color: #D26466;
+}
+
+.button.red:active {
+  background-color: #fbbbbc;
+}
+.orange {
+  background-color: #F17829;
+  color: #ece7e7;
+}
+
+.button.orange:hover {
+  border: 5px solid #F17829;
+  color: #F17829;
+}
+
+.button.orange:active {
+  background-color: #fde2d0;
+}
+
+.purple {
+  background-color: #9A7FAE;
+  color: #ece7e7;
+}
+
+.button.purple:hover {
+  border: 5px solid #9A7FAE;
+  color: #9A7FAE;
+}
+
+.button.purple:active {
+  background-color: #dfc8f0;
+}
