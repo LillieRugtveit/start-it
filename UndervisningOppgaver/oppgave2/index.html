@@ -21,8 +21,7 @@
   <script>
     function CopyColor(element, color) {
       let emptyElement = document.getElementById('empty');
-      emptyElement.innerText = `farge: ${element.innerText}`
-      emptyElement.className = `box ${color}`
+      emptyElement.innerHTML = `<div class="box ${color}">farge: ${element.innerText}</div>`
     }
 
   </script>
