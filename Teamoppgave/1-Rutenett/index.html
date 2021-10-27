@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutenett teamoppgave</title>
+</head>
+
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div class="box-container">
+        <div onclick="OnClick(this)" class="box"> </div>
+        <div onclick="OnClick(this)" class="box farge"> </div>
+        <div onclick="OnClick(this)" class="box"> </div>
+        <div onclick="OnClick(this)" class="box farge"> </div>
+        <div onclick="OnClick(this)" class="box "> </div>
+        <div onclick="OnClick(this)" class="box farge"> </div>
+        <div onclick="OnClick(this)" class="box "> </div>
+        <div onclick="OnClick(this)" class="box farge"> </div>
+        <div onclick="OnClick(this)" class="box"> </div>
+    </div>
+    <h2>Lagd av Team 4</h2>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&display=swap');
+
+        body,
+        html {
+            font-family: 'Comic Neue', cursive;
+            text-align: center;
+            color: white;
+            background-color: rgb(20, 18, 27);
+        }
+
+        .box-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            margin: 0 auto;
+            width: 383px;
+            border: 1px solid rgb(0, 0, 0);
+        }
+
+        .box {
+            display: grid;
+            align-content: center;
+            width: 123px;
+            height: 123px;
+            font-size: 100px;
+
+            background-color: rgba(255, 255, 255, 0.9);
+            color: rgb(13, 230, 31);
+            
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .farge {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+    </style>
+
+    <script>
+        let isCross = true;
+
+        function OnClick(element) {
+            if (element.innerText != "X" && element.innerText != "O") {
+                if (isCross == true) {
+                    element.innerText = "X";
+                    element.style = 'color: red;';
+                    isCross = false;
+                }
+                else if (isCross == false) {
+                    element.innerText = 'O';
+                    isCross = true;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
