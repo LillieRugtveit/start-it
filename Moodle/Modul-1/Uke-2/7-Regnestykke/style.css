@@ -1,0 +1,41 @@
+
+html, body {
+  margin: 0;
+}
+
+#resultDiv {
+  background-color: blue;
+}
+
+.container {
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.controller-container {
+  display: flex;
+  width: 10%;
+  padding: 1rem;
+  margin: 1rem;
+  flex-direction: column;
+  position: fixed;
+  background-color: blueviolet;
+  border-radius: 0.5rem;
+}
+
+.result-container {
+  display: flex;
+  width: 1000px;
+  height:  1000px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.resultBox {
+  padding: 2rem; 
+  color: white;
+  font-size: 1.5rem;
+}

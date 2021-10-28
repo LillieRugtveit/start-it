@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Regnestykke</title>
+</head>
+<body>
+  <div class="controller-container">
+    <input type="range" id="heightSlider" min="0" max="1000" step="1" oninput="UpdateDiv()"/>
+    <input type="range" id="widthSlider" min="0" max="1000" step="1" oninput="UpdateDiv()"/>
+  </div>
+
+    <div class="result-container">
+      <div id="resultDiv"></div>
+    </div>
+
+  <script>
+    const heightSlider = document.getElementById('heightSlider');
+    const widthSlider = document.getElementById('widthSlider');
+    const resultDiv = document.getElementById('resultDiv');
+    UpdateDiv();
+    
+
+    function UpdateDiv() {
+      let areal = heightSlider.value * widthSlider.value;
+      let omkrets = (2*heightSlider.value) + (2*widthSlider.value);
+      resultDiv.innerHTML = '<div class="resultBox" style="' 
+      + 'height: '  + heightSlider.value + 'px;'
+      + 'width: ' + widthSlider.value + 'px;'
+      + '">' + "Areal: " + areal + '\n' + 'Omkrets: ' + omkrets 
+      + '</div>';
+    }
+  </script>
+</body>
+</html>
