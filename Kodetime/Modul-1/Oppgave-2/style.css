@@ -46,14 +46,6 @@ h2 {
   font-weight: 600;
 }
 
-.button:hover {
-  background-color: transparent;
-}
-
-.button:active {
-  transform: scale(0.9);
-}
-
 /* Farger brukt */
 
 .coral {
@@ -61,66 +53,26 @@ h2 {
   color: whitesmoke;
 }
 
-.button.coral:hover {
-  border: 5px solid #FFA38C;
-  color: #FFA38C;
-}
-
-.button.coral:active {
-  background-color: #ffd0c4;
-}
 
 .cyan {
   background-color: #A4D8D8;
   color: #555555;
 }
 
-.button.cyan:hover {
-  border: 5px solid #A4D8D8;
-  color: #A4D8D8;
-}
 
-.button.cyan:active {
-  background-color: #dcfafa;
-}
 
 .red {
   background-color: #D26466;
   color: #e6dbdb;
 }
 
-.button.red:hover {
-  border: 5px solid #D26466;
-  color: #D26466;
-}
-
-.button.red:active {
-  background-color: #fbbbbc;
-}
 .orange {
   background-color: #F17829;
   color: #ece7e7;
 }
 
-.button.orange:hover {
-  border: 5px solid #F17829;
-  color: #F17829;
-}
-
-.button.orange:active {
-  background-color: #fde2d0;
-}
 
 .purple {
   background-color: #9A7FAE;
   color: #ece7e7;
-}
-
-.button.purple:hover {
-  border: 5px solid #9A7FAE;
-  color: #9A7FAE;
-}
-
-.button.purple:active {
-  background-color: #dfc8f0;
 }

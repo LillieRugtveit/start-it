@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Oppgave 2</title>
-</head>
-<body>
-  <div class="container">
-    <h2>Trykk på knappene for å få en farget boks</h2>
-    <div id="empty"></div>
-    <div onclick="CopyColor(this, 'coral')" class="button coral">Korall</div>
-    <div onclick="CopyColor(this, 'cyan')" class="button cyan">Turkis</div>
-    <div onclick="CopyColor(this, 'red')" class="button red">Rød</div>
-    <div onclick="CopyColor(this, 'orange')" class="button orange">Oransj</div>
-    <div onclick="CopyColor(this, 'purple')" class="button purple">Lilla</div>
-  </div>
-  
-  <script>
-    function CopyColor(element, color) {
-      let emptyElement = document.getElementById('empty');
-      emptyElement.innerHTML = `<div class="box ${color}">farge: ${element.innerText}</div>`
-    }
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Oppgave 2</title>
+	</head>
+	<body>
+		<div class="container">
+			<h2>Trykk på knappene for å få en farget boks</h2>
+			<div id="empty"></div>
+			<div onclick="CopyColor(this, 'coral')" class="button coral">Korall</div>
+			<div onclick="CopyColor(this, 'cyan')" class="button cyan">Turkis</div>
+			<div onclick="CopyColor(this, 'red')" class="button red">Rød</div>
+			<div onclick="CopyColor(this, 'orange')" class="button orange">Oransj</div>
+			<div onclick="CopyColor(this, 'purple')" class="button purple">Lilla</div>
+		</div>
 
-  </script>
-  
-</body>
+		<script>
+			function CopyColor(element, color) {
+				let emptyElement = document.getElementById("empty");
+				emptyElement.innerHTML = `<div class="box ${color}">farge: ${element.innerText}</div>`;
+			}
+		</script>
+	</body>
 </html>
