@@ -1,0 +1,36 @@
+html, body {
+  margin: 0;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.static-container {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: rgb(19, 137, 141);
+  border-radius: 0.5rem;
+  
+}
+
+.knapp {
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: coral;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  color: rgb(59, 56, 56);
+  font-weight: 800;
+  cursor: pointer;
+  flex-grow: 0;
+}

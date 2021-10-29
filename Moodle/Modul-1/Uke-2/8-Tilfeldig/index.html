@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tilfeldig</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="static-container">
+    <div class="knapp" onclick="GenererTilfeldigDiv()">Tilfeldig</div>
+  </div>
+  <div class="container">
+    <div id="kalkulertDiv"></div>
+  </div>
+  <script>
+    var kalkulertDiv = document.getElementById('kalkulertDiv');
+    GenererTilfeldigDiv()
+    function GenererTilfeldigDiv() {
+      let bredde = 100 + Math.floor(Math.random() * 500);
+      console.log(bredde);
+      let høyde = 100 + Math.floor(Math.random() * 500);
+      let borderStørrelse = Math.floor(Math.random() * 10);
+      kalkulertDiv.innerHTML = '<div style="'
+      + 'width: ' + bredde 
+      + 'px; height: ' + høyde
+      + 'px; border: solid; border-width: ' + borderStørrelse 
+      + 'px;  border-color: black; background-color: coral; padding: 1rem;">'
+      + 'Bredde: '  + bredde 
+      + 'px <br> Høyde: ' + høyde 
+      + 'px <br> Ramme: ' + borderStørrelse + 'px </div>'
+    }
+  </script>
+</body>
+</html>
