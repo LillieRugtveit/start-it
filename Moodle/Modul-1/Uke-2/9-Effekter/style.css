@@ -1,0 +1,115 @@
+html,
+body {
+	margin: 0;
+	height: 100vh;
+	font-family: sans-serif;
+	background-color: #f6eef5;
+}
+
+h2,
+h3 {
+	margin: 0.25rem;
+}
+
+h3 {
+	color: rgb(73, 72, 72);
+	font-weight: normal;
+}
+
+input[type="checkbox"] {
+	-ms-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+	padding: 10px;
+}
+
+button {
+  border: 0;
+  background-color: rgb(44, 42, 41);
+  color: whitesmoke;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  font-size: 1em;
+}
+
+/* Style panel */
+
+.style-panel {
+	display: flex;
+	position: fixed;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 1rem;
+	padding: 2rem;
+	border-radius: 0.5rem;
+	background-color: white;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.checkboxes {
+	display: grid;
+	margin-top: 0.5rem;
+	grid-template-columns: auto auto;
+}
+
+.checkbox {
+	display: flex;
+	margin: 0 2rem 0.25rem 0;
+}
+
+.checkbox-text {
+	margin-left: 0.5rem;
+}
+
+/* Main content */
+
+.container {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	width: 10rem;
+	height: 10rem;
+	color: transparent;
+}
+
+.box.selected {
+	background-color: rgb(250, 213, 203);
+	box-shadow: rgba(0, 0, 0, 0.02) 0px 8px 24px;
+}
+
+/* Checkbox toggle styles */
+
+.background {
+	background-color: rgb(236, 158, 138);
+}
+
+.border {
+	border: 0.2rem solid gray;
+}
+
+.padding {
+	padding: 1rem;
+}
+
+.margin {
+	margin: 2rem;
+}
+
+.text {
+	color: rgb(39, 38, 38);
+  text-align: center;
+}
+
+.borderRadius {
+  border-radius: 1rem;
+}
