@@ -30,7 +30,7 @@
 
 		// Controller
 		function checkPassword() {
-			if (guessedPassword == correctPassword) {
+			if (inputText == correctPassword) {
 				passwordText = rightPasswordText;
 			} else {
 				passwordText = wrongPasswordText;
@@ -38,7 +38,7 @@
 		}
 
 		function inputChanged(inputElement) {
-			guessedPassword = inputElement.value;
+			inputText = inputElement.value;
 			checkPassword();
 			view();
 		}
