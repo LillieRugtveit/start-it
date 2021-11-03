@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MVC Dynamisk</title>
+	</head>
+	<body onload="UpdateView()">
+		<div id="app"></div>
+	</body>
+	<script>
+		// Model
+		var boxSize;
+		var boxText;
+		var boxColor;
+		var borderRadius;
+		var borderColor; 
+
+		// View
+		function UpdateView() {
+			let app = document.getElementById('app');
+			app.innerHTML = RenderControllers();
+		}
+
+		function RenderControllers() {
+			let controllerHTML = '';
+			let boksSliderVerdi = 
+			
+			// boksStørrelseSlider
+			controllerHTML += 
+			'<input onchange="endreBoksStørrelse(this)"'
+			+ 'type="range" min="100" max="500" step="10"'
+			+ 'value="' + boksStørrelse + '"/>';
+
+			// boksTekstInput
+
+			controllerHTML += 
+			'<input onchange="endreBoksTekst(this)"'
+			+ 'type="text" value="' + boksTekst + '"/>'
+
+
+			return controllerHTML;
+		}	
+
+		// Controller
+		function endreBoksStørrelse(sliderElement) {
+			boksStørrelse = sliderElement.value;
+			UpdateView();
+		}
+
+		function endreBoksTekst(inputElement) {
+			boksTekst = inputElement.value;
+			UpdateView();
+		}
+
+		function endreBoksFarge(selectElement) {
+			boksFarge = selectElement.value;
+			UpdateView();
+		}
+
+		function endreRammeRadius(inputElement) {
+			rammeFarge = inputElement.value;
+			UpdateView();
+		}
+
+		function endreRammeFarge(sliderElement) {
+			rammeFarge = sliderElement.value;
+		}
+
+	</script>
+</html>

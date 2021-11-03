@@ -1,0 +1,64 @@
+Task 4:
+  Instruction text:
+    Make a webpage password "guesser".
+    Include text input, and text that tells user if password is right or wrong.
+
+    - Criterias: 
+      - You can't use alerts
+      - Needs to be done in MVC design
+      - Text needs to be printed from variable
+      - Use if statements
+    
+  Programming instructions:
+    HTML:
+      - Add Template page with ! emmet shortcut
+      - Edit title
+      - Inside body tag create div tag with id "app" // app id is used to get the element from JavaScript
+      - create script tag outside of body
+    
+    JS: 
+      Model: 
+        - Declare variables: 
+          - 'correctPassword' assigned "passwordNotSafe"
+          - 'passwordText' assigned ""
+          - 'wrongPasswordText' assigned "Password is wrong!"
+          - 'rightPasswordText' assigned "Password is right!"
+          - 'appElement' assigned document.GetElementById('app')
+          - 'guessedPassword' assigned  ""
+      
+      View:
+        
+        - Create function view(): 
+              Declare variables:
+                'passwordTextElement':
+                  - div tag
+                  - content: passwordText
+                  - closing tag
+                'textInputElement':
+                  - input tag
+                  - attribute onchange: inputChanged(this)
+                'viewInnerHTML':
+                  - template literal:
+                    - expression passwordTextElement
+                    - string "<br>"
+                    - expression textInputElement
+              Assign:
+                - appElement.innerHTML to viewInnerHTML;
+
+              - Add input:
+                - use tag input
+                - attribute type is "text"
+                - attribute value is guessedPassword variable // this is to make sure it has the value from rendering it 
+                - attribute value onchange is "inputChanged(this)" // this is referencing input element
+        - Call view() function // Running on first time loading page
+
+      Controller: 
+        - Create function checkPassword():
+          - check if guessedPassword is same as correctPassword
+            - change passwordText to be rightPasswordText
+          - else
+            - change passwordText to be wrongPasswordText
+        - Create function inputChanged(inputElement):
+          - assign guessedPassword to be inputElement.value 
+          - call function CheckPassword
+          - call function view()
