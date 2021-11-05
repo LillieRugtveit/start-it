@@ -22,7 +22,7 @@
 		let borderRadius = 0;
 		let borderColor = "black";
 		let borderColorIndex = 0;
-		let renderController = true;
+		let canUpdateController = true;
 
 		// View
 		View();
@@ -39,36 +39,37 @@
 					">${text}</div>
 				</div>
 			`;
-			if (renderController) {
+			// Only update controller once or else oninput event doesn't work properly!
+			if (canUpdateController) {
 				controller.innerHTML = `
 					<div class="container--controller-fixed">
 							<p class="title">Box Controller</p>
 							<p class="subtitle">Size</p>
-							<input oninput="handleRangeSize(this)" type="range" min="100" max="500" step="10" value="${size}">
+							<input oninput="handeInputSize(this)" type="range" min="100" max="500" step="10" value="${size}">
 							<p class="subtitle">Text</p>
 							<input oninput="handleInputText(this)" type="text" value="${text}">
 							<p class="subtitle">Color</p>
-							<select onchange="handleSelectColor(this)" select="${color}">
+							<select onchange="handleChangeColor(this)" select="${color}">
 								<option value="#D26466" ${colorIndex == 0 ? "selected" : null}>Red</option>
 								<option value="#BEE5B0" ${colorIndex == 1 ? "selected" : null}>Green</option>
 								<option value="#A4D8D8" ${colorIndex == 2 ? "selected" : null}>Blue</option>
 							</select>
 							<p class="subtitle">Border Radius</p>
-							<input oninput="handleRangeBorderRadius(this)" type="range" min="0" max="250" step="1" value="${borderRadius}">
+							<input oninput="handleInputRadius(this)" type="range" min="0" max="250" step="1" value="${borderRadius}">
 							<p class="subtitle">Border Color</p>
-							<select oninput="handleSelectBorderColor(this)">
+							<select oninput="handleChangeBorderColor(this)">
 								<option value="black" 	${borderColorIndex == 0 ? "selected" : null}>Black</option>
 								<option value="gray" 		${borderColorIndex == 1 ? "selected" : null}>Gray</option>
 								<option value="yellow" 	${borderColorIndex == 2 ? "selected" : null}>Yellow</option>
 							</select>
 						</div>
 				`;
-				renderController = false;
+				canUpdateController = false;
 			}
 		}
 
 		// Controller
-		function handleRangeSize(inputRangeElement) {
+		function handeInputSize(inputRangeElement) {
 			size = inputRangeElement.value;
 			View();
 		}
@@ -78,18 +79,18 @@
 			View();
 		}
 
-		function handleSelectColor(selectorElement) {
+		function handleChangeColor(selectorElement) {
 			color = selectorElement.value;
 			colorIndex = selectorElement.selectedIndex;
 			View();
 		}
 
-		function handleRangeBorderRadius(inputRangeElement) {
+		function handleInputRadius(inputRangeElement) {
 			borderRadius = inputRangeElement.value;
 			View();
 		}
 
-		function handleSelectBorderColor(selectorElement) {
+		function handleChangeBorderColor(selectorElement) {
 			borderColor = selectorElement.value;
 			borderColorIndex = selectorElement.selectedIndex;
 			View();
