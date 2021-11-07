@@ -38,10 +38,11 @@ button {
 	font-weight: 600;
 	transition: 250ms ease;
 	cursor: pointer;
+  transform-origin: center;
 }
 
 button:hover {
-	transform: scale(1.15);
+	transform: perspective(6rem) translateZ(0.5rem);
 }
 
 button:active {
