@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+:root {
+	--bg: #120716;
+	--primarydp1: #66267e;
+	--primarydp2: #6f2b87;
+	--primarydp3: #9a3bbd;
+	--primarytext: #d9b5e5;
+	--secondarydp2: #3d2779;
+	--secondarytext: #e1ccfa;
+}
+
+html,
+body {
+	margin: 0;
+	height: 100vh;
+	background-color: var(--bg);
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+  font-family: 'Montserrat';
+}
+
+h1 {
+	color: rgb(243, 236, 250);
+}
+
+.subtitle {
+	color: rgb(219, 205, 224);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+h2 {
+	color: rgb(196, 194, 197);
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+
+
+p {
+	color: var(--primarytext);
+}
+
+header {
+  text-align: center;
+}
+
+section {
+  width: 40rem;
+  margin: 4rem 0rem;
+}
+
+input[type=number] {
+  border: 0;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  
+  background-color: var(--primarydp1);
+  color: var(--secondarytext);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+button {
+  border: 0;
+  border-radius: 0.3rem;
+  background-color: #391547;
+  color: var(--primarytext);
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: 200ms;
+}
+
+button:hover {
+  background-color: var(--primarydp2);
+}
+
+button:active {
+  opacity: 0.6;
+}
+
+/* ids */
+
+#app {
+	height: 100%;
+}
+
+/* classes */
+
+.container {
+	display: flex;
+	height: 100%;
+	align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inputs-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  width: 40rem;
+  height: 2rem;
+  gap: 1rem;
+  height: 3.5rem;
+  padding-left: 1rem;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 40rem;
+  padding-left: 1rem;
+  gap: auto;
+  justify-content: space-between;
+}
+
+.stat-container {
+  width: 12rem;
+  background-color: var(--secondarydp2);
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.stats {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  
+}
+
+.text {
+	color: rgb(185, 185, 185);
+  margin: 0 0 0.75rem 0;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.padding {
+  padding-left: 1rem;
+}
