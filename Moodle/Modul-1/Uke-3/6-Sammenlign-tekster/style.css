@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+:root {
+	--bg: #120716;
+	--primarydp1: #66267e;
+	--primarydp2: #6f2b87;
+	--primarydp3: #9a3bbd;
+	--primarytext: #d9b5e5;
+	--secondarydp2: #3d2779;
+	--secondarytext: #e1ccfa;
+}
+
+html,
+body {
+	margin: 0;
+	height: 100vh;
+	background-color: var(--bg);
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+  font-family: 'Montserrat';
+}
+
+h1 {
+	color: rgb(243, 236, 250);
+}
+
+.subtitle {
+	color: rgb(219, 205, 224);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+h2 {
+	color: rgb(196, 194, 197);
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+p {
+	color: var(--primarytext);
+}
+
+header {
+  text-align: center;
+}
+
+section {
+  width: 40rem;
+  margin: 4rem 0rem;
+}
+
+input[type=text] {
+  border: 0;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  width: 12rem;
+  background-color:var(--secondarytext);
+  color: var(--primarydp1);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ids */
+
+#app {
+	height: 100%;
+}
+
+/* classes */
+
+.container {
+	display: flex;
+	height: 100%;
+	align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 20rem;
+  height: 15rem;
+  background-color: var(--secondarydp2);
+  padding: 1rem;
+  border-radius: 0.3rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 4rem;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1rem;
+}
+
+.small {
+  margin: 0.5rem 0;
+}
+
+.margin {
+  margin-top: 1rem;
+}
