@@ -1,0 +1,87 @@
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square {
+  width: 170px;
+  height: 170px;
+  background-color: blanchedalmond;
+}
+
+#dark {
+  background-color: rgb(179, 156, 122);
+}
+
+.puzzle {
+  background: url("https://media.discordapp.net/attachments/902105235391143937/905782792707768330/mopp.png");
+  background-size: 300%;
+}
+
+
+.puzzleFrameContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 510px;
+}
+
+.selected {
+  opacity: 0.5;
+}
+
+.Piece1 {
+  background-position: 0% 5%;
+} 
+
+.Piece2 {
+  background-position: 50% 5%;
+} 
+
+.Piece3 {
+  background-position: 100% 5%;
+} 
+
+.Piece4 {
+  background-position: 0% 38.5%;
+} 
+
+.Piece5 {
+  background-position: 50% 38.5%;
+} 
+
+.Piece6 {
+  background-position: 100% 38.5%;
+} 
+
+.Piece7 {
+  background-position: 0% 72%;
+} 
+
+.Piece8 {
+  background-position: 50% 72%;
+} 
+
+.Piece9 {
+  background-position: 100% 72%;
+} 
+
+.horizontalContainer {
+    display: grid;
+    padding-top: 25px;
+    grid-template-columns: auto auto auto;
+}
+
+.verticalContainer {
+    padding-right: 20px;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: auto;
+}

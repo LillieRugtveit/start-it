@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>2-Puslespill</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div id="app"></div>
+		</div>
+		<script>
+			// Model
+			let app = document.getElementById('app');
+			let canBeSwapped = false; 
+			let firstSquareClicked; 			
+			
+			// View
+			view();
+			function view(){
+				app.innerHTML = `
+					<h1>Puslespill</h1>
+					<div class="horizontalContainer">
+						<div class="verticalContainer">
+							<div class="square puzzle Piece1" onclick="handleClick(this)"></div>
+							<div class="square puzzle Piece3" onclick="handleClick(this)"></div>
+							<div class="square puzzle Piece4" onclick="handleClick(this)"></div>
+						</div>
+						<div class="puzzleFrameContainer">
+							<div class="square" onclick="handleClick(this)"></div>
+							<div class="square" onclick="handleClick(this)" id="dark"></div>
+							<div class="square" onclick="handleClick(this)"></div>
+							<div class="square" onclick="handleClick(this)"  id="dark"></div>
+							<div class="square" onclick="handleClick(this)"></div>
+							<div class="square" onclick="handleClick(this)" id="dark"></div>
+							<div class="square" onclick="handleClick(this)"></div>
+							<div class="square" onclick="handleClick(this)" id="dark"></div>
+							<div class="square" onclick="handleClick(this)"></div>
+						</div>
+						<div class="verticalContainer">
+							<div class="square puzzle Piece8" onclick="handleClick(this)"></div>
+							<div class="square puzzle Piece7" onclick="handleClick(this)"></div>
+							<div class="square puzzle Piece2" onclick="handleClick(this)"></div>
+						</div>
+					</div>
+					<div class="horizontalContainer">
+						<div class="square puzzle Piece5" onclick="handleClick(this)"></div>
+						<div class="square puzzle Piece6" onclick="handleClick(this)"></div>
+						<div class="square puzzle Piece9" onclick="handleClick(this)"></div>
+					</div>
+				`
+			}
+
+			// Controller
+			function handleClick(clickedSquare) {
+
+				if(canBeSwapped) {
+					setHighlight(firstSquareClicked, false);
+					swapSquares(firstSquareClicked, clickedSquare);
+					canBeSwapped = false;
+				} else {
+					firstSquareClicked = clickedSquare; 
+					setHighlight(firstSquareClicked, true);
+					canBeSwapped = true;
+				}
+			}
+
+			function setHighlight(square, toggle) {
+				square.classList.toggle('selected', toggle);
+			}
+
+			function swapSquares(squareOne, squareTwo) {
+				let className = squareOne.className;
+
+				squareOne.className = squareTwo.className;
+				
+				squareTwo.className = className;
+			}
+		</script>
+	</body>
+</html>
