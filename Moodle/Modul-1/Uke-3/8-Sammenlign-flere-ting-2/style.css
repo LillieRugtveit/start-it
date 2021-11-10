@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --bg: #1a181b;
+  --primarydp1: #66267e;
+  --primarydp2: #6f2b87;
+  --primarydp3: #9a3bbd;
+  --primarytext: #d9b5e5;
+  --secondarydp2: #3d2779;
+  --secondarydp3: #5235a3;
+  --secondarytext: #e1ccfa;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: var(--bg);
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: "Montserrat";
+}
+
+h1 {
+  color: rgb(243, 236, 250);
+}
+
+.subtitle {
+  color: rgb(219, 205, 224);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+p {
+  color: rgb(241, 230, 230);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 5vw;
+}
+
+input[type="radio"] {
+  padding: 1rem;
+  width: 1.5rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+button {
+  border: 0;
+  border-radius: 0.3rem;
+  background-color: var(--secondarydp2);
+  color: var(--secondarytext);
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: 200ms;
+  padding: 1rem 2rem;
+}
+
+button:hover {
+  background-color: var(--secondarydp3);
+}
+
+button:active {
+  opacity: 0.6;
+}
+
+/* ids */
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* inputs */
+
+.inputs {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.inputItem {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  padding: 1rem;
+  background-color: var(--primarydp1);
+  border-radius: 0.5rem;
+  gap: 0.5rem;
+} 
+
+.itemTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.25rem 0;
+  color: white;
+}
+
+.items {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;  
+  background-color: var(--primarydp3);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.itemLabel {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+

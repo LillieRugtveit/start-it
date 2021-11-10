@@ -1,0 +1,14 @@
+Oppgave 1:
+Skriv om til model-view-controller 
+og bruk funksjoner for å unngå gjentakelser i koden.
+
+Oppgave 2: 
+Legg til et fyll til og få alt til å fungere som før.
+
+Oppgave 3 
+Legg så til enda en ting til i bestillingen, 
+for eksempel firkantet eller rund pizza - 
+og få igjen alt til å virke som forventet. 
+
+
+Størrelse: Stor Middels Liten
