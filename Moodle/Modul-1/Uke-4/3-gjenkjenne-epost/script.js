@@ -94,7 +94,7 @@ function isEmailAdvanced(text) {
 }
 
 QUnit.module("isEmailAdvanced", function () {
-	QUnit.test("string with @", function (assert) {
+	QUnit.test("string with only @", function (assert) {
 		assert.equal(isEmailAdvanced("epost@epost"), false);
 	});
 
