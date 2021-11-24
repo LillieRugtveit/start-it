@@ -1,0 +1,15 @@
+#app {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 0px;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+} 
