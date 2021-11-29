@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+}
+
+#app {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.board {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 2px;
+}
+
+.square {
+    display: grid;
+    width: 10rem;
+    height: 10rem;
+    background-color: antiquewhite;
+    border: 1px black;
+    place-items: center;
+    font-size: 3rem;
+}
+
+main {
+    text-align: center;
+}
