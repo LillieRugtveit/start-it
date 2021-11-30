@@ -1,0 +1,16 @@
+body {
+    margin: 0px;
+    background-color: rgb(73, 64, 64);
+    height: 100vh;
+}
+
+#app {
+    margin: 0px;
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+button {
+    padding: 20px;
+    font-size: 100px;
+}
