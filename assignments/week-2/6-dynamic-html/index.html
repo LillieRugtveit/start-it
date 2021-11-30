@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Dynamic HTML</title>
+</head>
+<body>
+  <div class="controls">
+    <h3>Boks instillinger</h3>
+    <div class="text">størrelse</div>
+    <input oninput="showDiv()" type="range" id="sizeSlider" min="100" max="500" step="10"/>
+
+    <div class="text">Tekst</div>
+    <input oninput="showDiv()" type="text" id="textInput" value="Endre teksten!"/>
+    <div class="text">Farge</div>
+    <select id="colorChooser" onchange="showDiv()">
+      <option value="#D26466">Rød</option>
+      <option value="#BEE5B0">Grønn</option>
+      <option value="#A4D8D8">Blå</option>
+    </select>
+    <div class="text">Ramme radius størrelse</div>
+    <input oninput="showDiv()" type="range" id="borderSlider" min="0" max="250" step="2"/>
+    <div class="text">Ramme farge</div>
+    <select id="borderChooser" onchange="showDiv()">
+      <option value="black">Svart</option>
+      <option value="#BBB8B4">Grå</option>
+      <option value="transparent">Ingen</option>
+    </select>
+  </div>
+
+    <div class="container">
+      <h1>Dynamisk HTML</h1>
+      <div class="resultat-container">
+        <div id="resultat"></div>
+      </div>
+      
+      <div class="resultatHtml">
+        <h3>Resultat HTML:</h3>
+        <div id="resultatHtml"></div>
+      </div>
+    
+    </div>
+
+
+  <script>
+   var resultatDiv = document.getElementById('resultat');
+        var resultatHtmlDiv = document.getElementById('resultatHtml');
+        var sizeSlider = document.getElementById('sizeSlider');
+        var borderSlider = document.getElementById('borderSlider');
+        var textInput = document.getElementById('textInput');
+        var colorChooser = document.getElementById('colorChooser');
+        var borderChooser = document.getElementById('borderChooser');
+
+        showDiv();
+        
+
+        function showDiv() {
+            resultatDiv.innerHTML = '<div class="box" style="'
+            + 'width:' + sizeSlider.value + 'px' + ';'
+            + 'height:' + sizeSlider.value + 'px' + ';'
+            + 'background-color: ' + colorChooser.value + ';'
+            + 'border: 5px solid ' + borderChooser.value + ';'
+            + 'border-radius: ' + borderSlider.value + 'px' + ';'
+            + '">' + textInput.value + '</div>';
+            resultatHtmlDiv.innerText = resultatDiv.innerHTML;
+        }
+  </script>
+  
+</body>
+</html>

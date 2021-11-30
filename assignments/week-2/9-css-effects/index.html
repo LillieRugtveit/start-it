@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS Effects</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="style-panel">
+			<h2>Style panel</h2>
+			<h3 id="selectedText"></h3>
+			<div class="checkboxes">
+				<div class="checkbox">
+					<input type="checkbox" id="border" onchange="toggleStyle(this)" />
+					<div class="checkbox-text">Border</div>
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" id="background" onchange="toggleStyle(this)" />
+					<div class="checkbox-text">Background</div>
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" id="padding" onchange="toggleStyle(this)" />
+					<div class="checkbox-text">Padding</div>
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" id="margin" onchange="toggleStyle(this)" />
+					<div class="checkbox-text">Margin</div>
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" id="text" onchange="toggleStyle(this)" />
+					<div class="checkbox-text">Text</div>
+				</div>
+        <div class="checkbox">
+					<input type="checkbox" id="borderRadius" onchange="toggleStyle(this)" />
+					<div class="checkbox-text">border-radius</div>
+				</div>
+			</div>
+      <button onclick="removeSelection()">Clear selection</button>
+		</div>
+
+		<div class="container">
+			<div onclick="updateSelected(this)" id="one" class="box margin background text">
+				Box One!
+			</div>
+			<div onclick="updateSelected(this)" id="two" class="box margin background text">
+				Box Two!
+			</div>
+			<div onclick="updateSelected(this)" id="three" class="box margin background text">
+				Box Three!
+			</div>
+		</div>
+
+		<script>
+			var borderCheck = getCheckBox("border");
+			var backgroundCheck = getCheckBox("background");
+			var paddingCheck = getCheckBox("padding");
+			var marginCheck = getCheckBox("margin");
+			var textCheck = getCheckBox("text");
+      var borderRadiusCheck = getCheckBox("borderRadius");
+      var selectedText = document.getElementById("selectedText");
+
+			var selectedBox;
+
+			updateSelected(document.getElementById("one"));
+
+			function updateSelected(element) {
+				if(selectedBox != null) {
+          selectedBox.classList.toggle('selected', false);
+        }
+        selectedBox = element;
+        selectedBox.classList.toggle('selected', true);
+				selectedText.innerText = `Selected box: ${element.id}`;
+				updateCheckboxes();
+			}
+
+      function removeSelection() {
+        if(selectedBox != null) {
+          selectedBox.classList.toggle('selected', false);
+        }
+        selectedBox = null;
+        selectedText.innerText = `Selected box:`;
+      }
+      
+			function updateCheckboxes() {
+				updateCheckbox(borderCheck);
+				updateCheckbox(backgroundCheck);
+				updateCheckbox(paddingCheck);
+				updateCheckbox(marginCheck);
+				updateCheckbox(text);
+        updateCheckbox(borderRadiusCheck);
+			}
+
+			function updateCheckbox(checkbox) {
+				checkbox.checked = selectedBox.classList.contains(checkbox.id);
+			}
+
+			function toggleStyle(checkbox) {
+				selectedBox.classList.toggle(checkbox.id, checkbox.checked);
+			}
+
+			function getCheckBox(id) {
+				return document.getElementById(id);
+			}
+
+		</script>
+	</body>
+</html>
