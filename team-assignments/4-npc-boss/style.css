@@ -1,0 +1,14 @@
+#app {
+    padding: 2rem 20rem;
+} 
+
+.player {
+    display: grid;
+    justify-items: center;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
