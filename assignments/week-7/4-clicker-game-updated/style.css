@@ -1,58 +1,141 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400;1,500;1,600&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400;1,500;1,600&family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 html {
-    background-color: #2F2A39;
-    color: #FFF8EA;
-    font-family: 'Poppins'
+  background-color: #2f2a39;
+  color: #fff8ea;
+  font-family: "Poppins";
+  box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat';
-    color: #fdfbf6;
-}
-
-h1 {
-    color: #FB5980;
-}
-
-.heart {
-    border: none;
-    padding: 1rem 1rem;
-    background-color: transparent;
-    transition: 200ms;
-}
-
-.heart:active {
-    transform: scale(1.3);
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
-    margin: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat";
+  color: #fdfbf6;
+}
+
+h1 {
+  color: #fb5980;
 }
 
 header {
-    text-align: center;
-} 
+  text-align: center;
+}
+
+/* Layout */
 
 main {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-around;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
 }
 
 .user-info {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
+  display: grid;
+  grid-template-columns: repeat(2, auto);
 }
 
 .user-level {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  font-size: 1.8rem;
 }
 
 .game {
-    display: grid;
-    width: 25rem;
-    justify-items: center;
-    align-content: space-evenly; 
+  display: grid;
+  min-width: 25rem;
+  justify-items: center;
+  align-content: space-evenly;
+  padding: 1rem 0rem;
+}
+
+.counter {
+    border-radius: 0.5rem;
+    font-size: 3rem;
+    padding: 0rem 10rem;
+    font-weight: bold;
+    min-width: 40rem;
+    justify-self: center;
+    text-align: center;
+}
+
+.upgrade-stats {
+  display: grid;
+  justify-self: start;
+  font-size: 1.4rem;
+}
+
+.score-input {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.input-container {
+  display: grid;
+}
+
+
+
+/* Components */
+
+.heart {
+  border: none;
+  padding: 1rem 1rem;
+  background-color: transparent;
+  transition: 200ms;
+  font-size: 6rem;
+}
+
+.heart:active {
+  transform: scale(1.3);
+}
+
+.upgrade {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  opacity: 0.75;
+  transition: 200ms;
+}
+
+.upgrade:hover {
+  opacity: 1;
+}
+
+input {
+  padding: 0.7rem 1rem;
+  box-sizing: border-box;
+  border-radius: 0.1rem;
+}
+
+.score-button {
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.1rem;
+}
+
+/* Twemoji */
+
+img.emoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 0.05em 0 0.1em;
+  vertical-align: -0.1em;
 }
