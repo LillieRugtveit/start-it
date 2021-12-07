@@ -11,7 +11,6 @@ let npcObj = {
 let playerObj = {
   hp: 500,
   hr: 1,
-  crit: [5, 15],
   imageURL: 'https://cdn.discordapp.com/avatars/248765040008757249/8fe1da3a6f74b3824345f46494a191e7.webp?size=128',
   name: 'Eskil',
 }
@@ -64,25 +63,41 @@ function CreatePlayer(playerObjInput) {
   `
 }
 
-
 function CreateSkillButtons(attackObjInput) {
   let attackObjEntries = Object.entries(attackObjInput);
   let buttonsHTML = '';
   for (let i = 0; i < attackObjEntries.length; i++) {
     const element = attackObjEntries[i][1];
     buttonsHTML += `
-        <button onclick="ExecuteSkill(${element.dmg}, ${element.hr}, ${element.dr}, ${element.def})">${attackObjEntries[i][1].name}</button>
+        <button onclick="ExecutePlayerSkill(${element.dmg}, ${element.hr}, ${element.dr}, ${element.def})">${attackObjEntries[i][1].name}</button>
       `;
   }
   return buttonsHTML;
 }
 
 function getRandomNumber() {
-  return 0.70;
+  return Math.random();
 }
 
-function ExecuteSkill(attackDMG, attackHR, attackDR, attackDEF) {
-  let didAttackHit = attackHR > getRandomNumber();
-  console.log(attackHR);
-  console.log(didAttackHit);
+function updateFightText(text) {
+  console.log(text);
+}
+
+function ExecutePlayerSkill(attackDMG, attackHR, attackDR, attackDEF) {
+  let didAttackHit = attackHR > getRandomNumber(); // false or true - brukes kun linje 92
+  let criticalHit =  0.5 > getRandomNumber(); // false or true - 0.5 
+  let changeDMG = criticalHit ? attackDMG*2 : attackDMG;
+  if(!didAttackHit) {
+    updateFightText('You missed');
+  }
+  else {
+    npcObj.hp -= changeDMG;
+  }
+  // Bruker slått terje - tekst html
+  if (npcObj.hp == 0) {
+    alert('terje er død');
+  }
+  View();
+  // delay 1s
+  // kjøre terje med attackDefence og attackDefenceRate
 }
