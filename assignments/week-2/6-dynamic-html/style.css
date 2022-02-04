@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,700&display=swap');
+
+
 html, body {
   margin: 0;
   height: 100vh;
-  font-family: sans-serif;
-  background-color: rgb(250, 231, 247);
+  font-family: 'Montserrat';
+  background-color: #2F2A39;
+  color: #FFF8EA;
 }
 
 
@@ -34,7 +38,7 @@ html, body {
   width: 15%;
   margin: 1rem;
   position: fixed;
-  background-color: rgb(252, 163, 255);
+  background-color: #201820;
   padding: 1rem;
   border-radius: 0.5rem;
 }
@@ -52,7 +56,8 @@ html, body {
 }
 
 .box {
-  color: rgb(31, 31, 31);
+  color: #FFF8EA;
+  font-weight: 800;
   display: flex;
   justify-content: center;
   align-items: center;

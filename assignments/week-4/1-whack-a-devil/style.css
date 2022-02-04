@@ -5,7 +5,8 @@ body {
   margin: 0;
   height: 100vh;
   box-sizing: border-box;
-  background-color: rgb(243, 243, 243);
+  background-color: #2F2A39;
+  color: #FFF8EA;
 }
 
 *,
@@ -50,7 +51,7 @@ header {
   align-items: center;
   gap: 2rem;
   padding: 2rem;
-  background-color: rgb(133, 238, 119);
+  background-color: rgb(200, 195, 195);
   border-radius: 0.5rem;
 }
 
@@ -98,14 +99,13 @@ button:active {
 
 .stats-container {
   width: 10rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 0.5rem;
-  background-color: white;
+  background-color: #1f1c25;
   padding: 0.5rem 1rem;
 }
 
 .stats-label {
-  color:rgb(25, 119, 17);
+  color:rgb(200, 200, 200);
   font-weight: 600;
 }
 

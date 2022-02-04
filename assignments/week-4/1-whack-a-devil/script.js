@@ -25,7 +25,7 @@ const maxDifficulty = 5;
 const emojiAmount = 9;
 const hitEmoji = "💥";
 const deadEmoji = "⚰️";
-const innocentEmoji = "🥺";
+const innocentEmoji = "😊";
 const devilEmoji = "👹";
 const defaultEmoji = "🪨";
 
